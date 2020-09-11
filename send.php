@@ -23,20 +23,20 @@ $mail->SMTPSecure = "tls";
 //Set TCP port to connect to
 $mail->Port = 587;                                   
 
-$mail->From = "isxoqjon_7710@mail.ru";
-$mail->FromName = "Isxoqjon Axmedov";
+$mail->From = "jo'natuvchi pochtasi";
+$mail->FromName = "Jo'natuvchi ismi";
 
-$mail->addAddress("emardonbek@bk.ru", "Mardonbek");
+$mail->addAddress("qabul qiluvchi", "Ismi");
 
 $mail->isHTML(true);
 
 $mail->Subject = "Subject Text";
-$mail->Body = "<i>Mail body in HTML</i>";
-$mail->AltBody = "This is the plain text version of the email content";
+$mail->Body = "Mail body";
+$mail->AltBody = "Bu content text";
 
 try {
     $mail->send();
-    echo "Message has been sent successfully";
+    echo "Xabar jo'natildi;
 } catch (Exception $e) {
     echo "Mailer Error: " . $mail->ErrorInfo;
 }
